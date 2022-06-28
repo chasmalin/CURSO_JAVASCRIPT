@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo programa com JS</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>assim já me livrei da maldição =3</p>
+
+    <!--
+        parte de JavaScript
+    -->
+    <script>
+        //var n1 = window.prompt('Digite um número: ');
+        //var n2 = window.prompt('Digite outro número: ');
+        //var s = n1 + n2; // esse + vai concatenar as variáveis (tipo em python)
+        // isso vai acontecer quando forem string, e o prompt recebe strings, então n1 e n2 não estão sendo tratados como números, o resultado concatenado:
+        //window.alert('A soma é: ' + s + ' (números concatenados)');
+
+        var n1 = Number.parseFloat(window.prompt('Digite um número: '));
+        var n2 = Number.parseFloat(window.prompt('Digite outro número: '));
+        var s = n1 + n2; 
+        window.alert('Agora temos a soma verdadeira: ' + s);
+        //dá pra usar só Number(n), mas daí não vai especificar se é float ou int (isso está nas versões mais recentes do ecma script)
+        //para converter número pra string podemos usar String(n) ou n.toString()
+
+        //agora para facilitar a concatenação de strings, dá pra usar um tal de template string (novidade do ecma script), que fica tipo: ${s} (chama place holder isso), mas daí a string tem que estar entre acentos `` (crase) pra funcionar
+        window.alert(`Agora temos a soma verdadeira com template string: ${n1} + ${n2} = ${s}`);
+    </script>
+</body>
+</html>
