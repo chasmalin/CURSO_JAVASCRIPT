@@ -16,12 +16,12 @@
 <body>
     <!--
         operadores aritiméticos de JS
-        5 + 2 = 7
-        5 - 2 = 3
-        5 * 2 = 10
-        5 / 2 = 2,5
-        5 % 2 = 1 (módulo - resto da divisão inteira)
-        5 ** 2 = 25 (potência)
+        5 + 2 -> 7
+        5 - 2 -> 3
+        5 * 2 -> 10
+        5 / 2 -> 2,5
+        5 % 2 -> 1 (módulo - resto da divisão inteira)
+        5 ** 2 -> 25 (potência)
 
         var n = 1;
         n += 2; // funciona pra todos: -=, *=, /=, %= e **=.
@@ -29,6 +29,44 @@
         pré-incremento e pós-incremento
     -->
     
+    <!--
+        operadores relacionais em JS
+        5 > 2 -> true
+        7 < 4 -> false
+        8 >= 8 -> true
+        9 <= 7 -> false
+        5 == 5 -> true
+        4 != 4 -> false
+        operadores relacionais de identidade RESTRITA (===)
+        5 == '5' ?
+        vai ser true, porque em JS o sinal de igualdade não testa o tipo da variável, ele só analisa se eles têm o mesmo valor/grandeza
+        5 === '5' -> aqui vai ser false
+        5 === 5 -> true
+    -->
+
+    <!--
+        operadores lógicos em JS
+        !  -> negação
+        && -> conjunção
+        || -> disjunção
+        (&& e || seguem a tabela verdade)
+    -->
+
+    <!--
+        ordem de precedência
+        1º () , 2º ** , 3º / e * e % , 4º + e -
+        > e < e >= e <= (sem ordem de precedência entre eles)
+        1º ! , 2º && , 3º ||
+    -->
+
+    <!--
+        operadores ternários em JS
+        ? e :
+        teste ? true : false
+        var média = 8;
+        média >= 7.0 ? "Aprovado" : "Reprovado"
+        daí vai aparecer na tela "Aprovado"
+    -->
 
     <script>
         var nome = window.prompt('qual é seu nome?');
