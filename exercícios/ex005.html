@@ -5,8 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font: normal 1em Arial;
+        }
+    </style>
 </head>
 <body>
     <h1>iniciando estudos com DOM</h1>
+    <!--
+        Document
+        Object
+        Model
+        modedlo de objetos para documentos -> basicamente é um conjunto de objetos dentro do navegador que vai dar acesso aos componentes internos do website (ele não funciona no node.js, ele está presente quando estamos rodando JS dentro do navegador)
+        uma coisa importante que temos que saber fazer, é a tal ÁRVORE DOM do nosso site (uma árvore hierárquica)
+        ela começa da raiz, que é chamada "window"
+        dentro do window tem:
+        "location" (localização do dite, url, página anterior/atual), "document" (documento atual) e "history" (navegação) - dentre esses têm vários
+        dentro do "document" tem "html" que tem "head" e "body" como filhos (parent/child)
+        dentro de head tem "meta" e "title"
+        deu pra entender né?
+    --> 
+    <p>aqui vai o resultado, um pedaço em <strong>negrito</strong> (=</p> 
+    <div id="msg">clique em mim</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae modi laboriosam, quia ex explicabo pariatur impedit quam perferendis accusantium vel mollitia, veniam porro quisquam nesciunt, dignissimos ducimus recusandae soluta nam.</p>
+    <div id="msg2">criando outra div para fazer testes</div>
+    <script>
+        window.document.write('<br>' + window.document.URL +'<br>');
+        //aprendendo a selecionar objetos em JS, dentro do window - pela árvore DOM
+        var p1 = window.document.getElementsByTagName('p')[0]; //dá pra acessar qualquer elemento do site comutilizando getElementsByTagName, se o objeto tem Id dá pra fazer por Id, se tem Nome, faz por nome, por classe, por seletor etc
+        p1.style.color = 'blue';
+        window.document.write('<br>Está escrito assim: ' + p1.innerText + '<br>'); // text vem sem formatação
+        //se quiser que ele coloca com a mesma formatação:
+        window.document.write('<br>aqui: ' + p1.innerHTML);
+        //posso também criar uma variável aqui pro corpo do site e mudar a cor dele:
+        var corpo = window.document.body;
+        corpo.style.background = 'gray';
+        //modificar por tag pode ficar bagunçado, porque têm muitas tags iguais (vários <p> por exemplo), então vamos colocar um Id na div pra testar: (msg)
+        var d = window.document.getElementById('msg');
+        d.style.background = 'green'; // mudando a cor do fundo da div por aqui
+        d.innerText = 'Aguardando...'; //o texto da div original foi substituído por esse
+        //o recomendável é fazer esse paranauê por seletor!
+        var D = window.document.querySelector('div#msg2'); //aqui usa a sintaxe do CSS (quando é id representa com # quando é class representa com .)
+        D.style.background = 'blue';
+    </script>
 </body>
 </html>
