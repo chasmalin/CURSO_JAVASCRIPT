@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            /*pro texto ficar no meio da div*/
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Eventos DOM (alguns que podem aconter dentro da div)
+        mouseenter (se entrar na div com o mouse)
+        mousemove (mover dentro da div)
+        mousedown (clicar e segudar)
+        mouseup (soltar o clique)
+        click
+        mouseout (sair com o ponteiro da div)
+    -->
+    <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/Events">lista de eventos DOM</a></p>
+    <!--
+        vamos criar um evento em HTML (dá pra criar aqui ou no script)
+        o método a ser "disparado" é o evento de clique, para isso em html, colocar dentro da div do lado o id onclick (nome do evento/método que eu quero disparar) , que por sua vez vai chamar "clicar()" (nome da ação)
+    -->
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+
+    <script>
+        //... depois de escolher o método a ser disparado (onclick), vem aqui e cria um bloco de função
+
+        var a = window.document.getElementById('area'); //trouxe essa definição pra cá só pra textar o entrar()
+        function clicar(){
+            //isso aqui vai rodar só quando chamar a função clicar()
+            //var a = window.document.getElementById('area');
+            a.innerText = '...clicou!';
+        }
+        //agora volta lá e coloca "onmousenenter"
+        function entrar(){
+            //para poder acessar a variável a, coloca ela pra fora da função
+            a.innerText = "Entrou!"
+        }
+        function sair(){
+            a.innerText = 'Saiu!';
+        }
+        //VÍDEO 15 > 15MIN 20SEG
+    </script>
+</body>
+</html>
