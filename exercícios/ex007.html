@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando</title>
+    <style>
+        body{
+            font: normal 1.2em arial;
+        }
+        input{
+            font: normal 1.2em arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txt1" id="txt1"> +
+    <input type="number" name="txt2" id="txt2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar(){
+            var caixatxt1 = window.document.getElementById('txt1');
+            var caixatxt2 = window.document.querySelector('input#txt2');
+            //funcionan dos dois jeitos, qualquer dúvida rever a aula 9!
+            var res = window.document.getElementById('res');
+            //agora tem que criar variáveis para transformar o texto em número
+            var n1 = Number(caixatxt1.value);
+            var n2 = Number(caixatxt2.value);//também dá pra fazer com o parseint
+            var s = n1 + n2;
+            res.innerHTML = `Resultado: A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`;
+        }
+    </script>
+</body>
+</html>
