@@ -8,6 +8,26 @@
 </head>
 <body>
     <h1>SISTERMAS DE MULTAS</h1>
-    <!-- 19minutos AULA11, vídeo 17-->
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <!-- o "name" é muito útil pra php, então não vamos tirar-->
+    <input type="button" value="Verificar" onclick="calcular()">
+    <!--agora vamos criar um script para ligar o JS com a caixa de texto que chamamos de txtvel-->
+    <div id="res"> <!--criando a div pra botar o resultado-->
+        <p>o resultado vai aparecer aqui</p>
+    </div>
+    <script>
+        function calcular(){
+            var txtv = window.document.querySelector('input#txtvel'); // essa linha é equivalente a próxima
+            //var txtv = window.document.getElementById('txtvel'); 
+            var res = window.document.querySelector('div#res');
+            var vel = Number(txtv.value);
+            res.innerHTML = `<p>Sua velocidade é de <strong>${vel}Km/h!</strong></p>`;
+            if(vel > 60){ // tem que concatenar com += porque senão ele apaga o anterior!
+                res.innerHTML += '<p>Você está <strong>MULTADO</strong> por excesso de celocidade</p>'
+            }
+            res.innerHTML += '<p>Dirija sempre com segurança!</p>'
+        }
+        
+    </script>
 </body>
 </html>
