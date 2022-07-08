@@ -1,7 +1,8 @@
 var agora = new Date();
 var hora = agora.getHours();
 var minutos = agora.getMinutes();
-console.log(`Agora são ${hora} horas e ${minutos} minutos.`);
+var segundos = agora.getSeconds();
+console.log(`Agora são ${hora} horas e ${minutos} minutos e ${segundos} segundos.`);
 if(hora < 12){
     console.log('bom dia');
 }else if(hora <= 18){
