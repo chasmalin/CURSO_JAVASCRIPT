@@ -40,11 +40,20 @@
     <script>
         //... depois de escolher o método a ser disparado (onclick), vem aqui e cria um bloco de função
 
+        //depois de tudo configurado, dá pra "limpar" o html, tirando as configurações da div e colocando aqui no script, fica assim:
+        /*
+        a.addEventListener('click', clicar);
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', sair);
+        */
+       //daí com essas 3 linhas, podemos tirar as configurações lá da div, deixa só <div id="area">
+
         var a = window.document.getElementById('area'); //trouxe essa definição pra cá só pra textar o entrar()
         function clicar(){
             //isso aqui vai rodar só quando chamar a função clicar()
             //var a = window.document.getElementById('area');
             a.innerText = '...clicou!';
+            a.style.background = 'red';
         }
         //agora volta lá e coloca "onmousenenter"
         function entrar(){
@@ -53,6 +62,7 @@
         }
         function sair(){
             a.innerText = 'Saiu!';
+            a.style.background = 'green';
         }
         //VÍDEO 15 > 15MIN 20SEG
     </script>
