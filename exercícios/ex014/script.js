@@ -6,7 +6,7 @@ function carregar(){
     var hora = data.getHours();
     //var hora = 19;
     var min = data.getMinutes();
-    msg.innerHTML = `Agora são ${hora} horas e ${min} minutos. (=`;
+    msg.innerHTML = `Agora são ${hora} horas e ${min} minutos.`;
     if (hora >= 0 && hora < 12){
         //bom dia
         img.src = '../aula12_exercicios/imagens/amanha.png';

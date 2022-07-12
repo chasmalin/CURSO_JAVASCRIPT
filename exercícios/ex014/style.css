@@ -24,6 +24,10 @@ div{
     padding: 8px;
 }
 
+div.clock::after{
+    content: '\23F0';
+}
+
 footer{
     /*background-color: rgb(255, 223, 182);*/
     text-align: center;
