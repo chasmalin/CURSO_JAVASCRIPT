@@ -1,11 +1,12 @@
 body{
+    background-color: #9ca85e;
     background-color: antiquewhite;
     font: normal 1.1em arial;
 }
 
 header{
-    background-color: rgb(255, 223, 182);
-    color: brown;
+    /*background-color: rgb(255, 223, 182);*/
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 
@@ -18,10 +19,15 @@ section{
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
+div{
+    text-align: center;
+    padding: 8px;
+}
+
 footer{
-    background-color: rgb(255, 223, 182);
+    /*background-color: rgb(255, 223, 182);*/
     text-align: center;
     font-style: italic;
-    color: crimson;
+    color: rgb(255, 255, 255);
 }
 /**/
