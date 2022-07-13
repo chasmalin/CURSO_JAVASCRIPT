@@ -25,7 +25,7 @@ div{
 }
 
 p.teste::after{
-    content: '\1F4C5';
+    content: '\1F4C5'; /*colocando emoji do calendário*/
 }
 
 footer{

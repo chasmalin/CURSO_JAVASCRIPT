@@ -15,13 +15,33 @@ function verificar(){
         var idade = ano - Number(fano.value);
         //res.innerHTML = `Idade calculada ${idade}`;
         var genero = '';
-        if (fsex[0].checked){
-            genero = 'Homem 👦🏻';
-        } else if (fsex[1].checked){
-            genero = 'Mulher 👧🏻';
-        }
+        var img = document.createElement('img');
         res.style.textAlign = 'left';
-        res.innerHTML = `${genero} de ${idade} anos.`
+        if (fsex[0].checked){
+            genero = 'Homem';
+            if (idade >=0 && idade < 10){
+                res.innerHTML = `${genero} de ${idade} anos 👶🏻 🧒🏻.`
+            } else if (idade < 21){
+                res.innerHTML = `${genero} de ${idade} anos 🧒🏻.`
+            } else if (idade < 65){
+                res.innerHTML = `${genero} de ${idade} anos 👨🏻.`
+            } else{
+                res.innerHTML = `${genero} de ${idade} anos 👨🏼‍🦳.`
+                img.setAttribute('src','../aula12_exercicios/imagens/amanha.png');
+            }
+        } else if (fsex[1].checked){
+            genero = 'Mulher';
+            if (idade >=0 && idade < 10){
+                res.innerHTML = `${genero} de ${idade} anos 👶🏻 👧🏻.`
+            } else if (idade < 21){
+                res.innerHTML = `${genero} de ${idade} anos 👧🏻.`
+            } else if (idade < 65){
+                res.innerHTML = `${genero} de ${idade} anos 👩🏻.`
+            } else{
+                res.innerHTML = `${genero} de ${idade} anos 👩🏼‍🦳.`
+            }
+        }
     }
-        
+    // PARA COLOCAR IMAGENS FICARIA ASSIM:
+    img.setAttribute('src','../aula12_exercicios/imagens/amanha.png');
 }
