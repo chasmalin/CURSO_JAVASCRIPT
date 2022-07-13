@@ -1,23 +1,19 @@
-//alert('olá');
-function carregar(){
-    var msg = window.document.getElementById('msg');
-    var img = window.document.getElementById('imagem');
+// alert('olá');
+function verificar(){
+    //alert('FUNCIONOU!');
     var data = new Date();
-    var hora = data.getHours();
-    //var hora = 19;
-    var min = data.getMinutes();
-    msg.innerHTML = `Agora são ${hora} horas e ${min} minutos.`;
-    if (hora >= 0 && hora < 12){
-        //bom dia
-        img.src = '../aula12_exercicios/imagens/amanha.png';
-        document.body.style.background = '#9ca85e';
-    } else if (hora >= 12 && hora < 18){
-        //boa tarde
-        img.src = '../aula12_exercicios/imagens/atarde.png';
-        document.body.style.background = '#ad6200';
+    var ano = data.getFullYear();
+    var fano = document.getElementById('txtano'); //formulário ano
+    //var res = document.getElementById('res');
+    //essa maneira de baixo é "mais moderna"
+    var res = document.querySelector('div#res');
+    if (fano.value.length == 0 || fano.value > ano){
+        alert('[ERRO] Verifique os dados e tente novamente!');
     } else{
-        //boa noite
-        img.src = '../aula12_exercicios/imagens/anoite.png';
-        document.body.style.background = '#000051';
+        //alert('ok');
+        var fsex = document.getElementsByName('radsex');
+        var idade = ano - Number(fano.value);
+        res.innerHTML = `Idade calculada ${idade}`;
     }
+        
 }
