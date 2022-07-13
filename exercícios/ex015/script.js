@@ -13,7 +13,15 @@ function verificar(){
         //alert('ok');
         var fsex = document.getElementsByName('radsex');
         var idade = ano - Number(fano.value);
-        res.innerHTML = `Idade calculada ${idade}`;
+        //res.innerHTML = `Idade calculada ${idade}`;
+        var genero = '';
+        if (fsex[0].checked){
+            genero = 'Homem 👦🏻';
+        } else if (fsex[1].checked){
+            genero = 'Mulher 👧🏻';
+        }
+        res.style.textAlign = 'left';
+        res.innerHTML = `${genero} de ${idade} anos.`
     }
         
 }

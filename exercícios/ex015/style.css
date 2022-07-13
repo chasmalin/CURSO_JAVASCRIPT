@@ -24,8 +24,8 @@ div{
     padding: 8px;
 }
 
-div.clock::after{
-    content: '\23F0';
+p.teste::after{
+    content: '\1F4C5';
 }
 
 footer{
