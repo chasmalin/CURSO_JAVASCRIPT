@@ -15,8 +15,7 @@ function verificar(){
         var idade = ano - Number(fano.value);
         //res.innerHTML = `Idade calculada ${idade}`;
         var genero = '';
-        var img = document.createElement('img');
-        res.style.textAlign = 'left';
+        //res.style.textAlign = 'left';
         if (fsex[0].checked){
             genero = 'Homem';
             if (idade >=0 && idade < 10){
@@ -27,7 +26,6 @@ function verificar(){
                 res.innerHTML = `${genero} de ${idade} anos 👨🏻.`
             } else{
                 res.innerHTML = `${genero} de ${idade} anos 👨🏼‍🦳.`
-                img.setAttribute('src','../aula12_exercicios/imagens/amanha.png');
             }
         } else if (fsex[1].checked){
             genero = 'Mulher';
@@ -43,5 +41,7 @@ function verificar(){
         }
     }
     // PARA COLOCAR IMAGENS FICARIA ASSIM:
-    img.setAttribute('src','../aula12_exercicios/imagens/amanha.png');
+    var img = document.createElement('img');
+    img.setAttribute('src','anoite.png');
+    res.appendChild(img);
 }
