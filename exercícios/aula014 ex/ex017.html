@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
-    <link rel="stylesheet" href="ex017.css">
+    <title>Super Contador</title>
+    <link rel="stylesheet" href="ex016.css">
 </head>
-<body onload="carregar()">
+<body>
     <header>
-        <h1>Hora do Dia</h1>
+        <h1>Vamos contar</h1>
     </header>
 
     <section>
-        <div id="msg" class="clock">
-            
+        <div id="dados">
+            <p>Início: <input type="number" name="inicio" id="txti"></p>
+            <p>Fim: <input type="number" name="fim" id="txtf"></p>
+            <p>Passo: <input type="number" name="passo" id="txtp"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
         </div>
-        <div id="foto">
-            <img id="imagem" src="../aula12_exercicios/imagens/amanha.png" alt="Foto do dia">
+        <div id="res">
+            Preparando a contagem...
         </div>
     </section>
-    
     <footer>
         <p>&copy; CursoemVídeo</p>
     </footer>
     <!-- pra criar um script externo como fazemos com css, é só escrever script src, daí coloca um nome.js e clica nele segurando enter pra ele criar o arquivo, hehe -->
-    <script src="ex017.js"></script>
+    <script src="ex016.js"></script>
 </body>
 </html>
