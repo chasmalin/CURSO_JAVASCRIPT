@@ -1,23 +1,20 @@
-// alert('olá');
-function carregar(){
-    var msg = window.document.getElementById('msg');
-    var img = window.document.getElementById('imagem');
-    var data = new Date();
-    var hora = data.getHours();
-    //var hora = 19;
-    var min = data.getMinutes();
-    msg.innerHTML = `Agora são ${hora} horas e ${min} minutos.`;
-    if (hora >= 0 && hora < 12){
-        //bom dia
-        img.src = '../aula12_exercicios/imagens/amanha.png';
-        document.body.style.background = '#9ca85e';
-    } else if (hora >= 12 && hora < 18){
-        //boa tarde
-        img.src = '../aula12_exercicios/imagens/atarde.png';
-        document.body.style.background = '#ad6200';
-    } else{
-        //boa noite
-        img.src = '../aula12_exercicios/imagens/anoite.png';
-        document.body.style.background = '#000051';
+function contar(){
+    let ini = document.getElementById('txti');
+    let fim = document.getElementById('txtf');
+    let passo = document.getElementById('txtp');
+
+    let res = document.getElementById('res');
+
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        window.alert('[ERRO] vazio!');
+    } else {
+        res.innerHTML = 'Contando...';
+        let i = Number(ini.value);
+        let f = Number(fim.value);
+        let p = Number(passo.value);
+
+        for(let c = i; c <= f; c += p){
+            res.innerHTML+= `${c} `;
+        }
     }
 }

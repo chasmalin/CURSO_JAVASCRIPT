@@ -1,12 +1,11 @@
 body{
-    background-color: #9ca85e;
-    background-color: antiquewhite;
+    background-color: black;
     font: normal 1.1em arial;
 }
 
 header{
     /*background-color: rgb(255, 223, 182);*/
-    color: rgb(255, 255, 255);
+    color: white;
     text-align: center;
 }
 
@@ -29,9 +28,8 @@ div.clock::after{
 }
 
 footer{
-    /*background-color: rgb(255, 223, 182);*/
     text-align: center;
     font-style: italic;
-    color: rgb(255, 255, 255);
+    color: white;
 }
 /* */
