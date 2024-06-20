@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copiando</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        input {
+            font: normal 1.2em arial;
+            width: 100px;
+        }
+
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Copiar texto</h1>
+    <p id="txt">Texto a ser copiado</p>
+    <textarea name="colar" id="colar">cole aqui o texto copiado</textarea><br>
+    <button value="Copiar" onclick="copiar()">Copiar</button>
+
+    <script>
+        function copiar() {
+            var txt_copy = document.getElementById('txt').innerText;
+            navigator.clipboard.writeText(txt_copy)
+        }
+    </script>
+</body>
+
+</html>
